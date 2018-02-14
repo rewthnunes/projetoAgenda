@@ -2,20 +2,76 @@
 <html>
 <head>
 <style type="text/css">
-	 h1 { color: red; }  
-     h2 { color: #0f0; }
-     p  { color: rgb(0,0,255); }
+ 	h1 {color:black};
+ 	h5 {color:green}
+ 	
+table{
+  width: 100%;
+  margin-bottom : .5em;
+  table-layout: fixed;
+  text-align: center;
+} 	
+   
 </style>
 
 <meta charset="ISO-8859-1">
 <title>Projeto Agenda</title>
 </head>
 <body>
-	<div style="width:98%;height:auto; border:1px solid #aaa;padding:4px;background:#FF0000;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.90,#3cf),color-stop(0.02,#ff0));color:#FF0000;">
-		<p><h1>Agenda Telefonica...</h1></p>
+	<div style="width:98%; text-align:center; height:auto; border:1px solid #aaa;padding:4px;background:#FF0000;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.90,#3cf),color-stop(0.02,#ff0));color:#FF0000;">
+		<p><h1 style="font-family:courier;">Agenda Telefonica...</h2>
 	</div>
+	<hr>
 	
-	<div></div>	
+	<div style="width:80%; margin:auto; height:auto; border:2px solid #aaa;padding:4px;background:#FF0000;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.90,#3cf),color-stop(0.02,#ff0));color:#FF0000;">
+  
+    <h3 style="font-family:courier; color:green ">
+      Add Contatos
+    </h3>
+    <div class="box-content">
+      <table border="1px" background= "#ffc" cellpadding="5px" cellspacing="0" ID="alter">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Telefone</th>
+            <th>Apelido</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <input type="radio" name="radio" id="01">
+            </td>            
+            <td> <input type="text" name="nome" id="02"> </td>
+            <td> <input type="text" name="email" id="03"> </td>
+            <td> <input type="text" name="tel" id="04"> </td>
+            <td> <input type="text" name="apel" id="05"> </td>	            
+          </tr>
+        </tbody>
+      </table>
+      
+      <div style=text-align:right;>
+	      <button type="button">Adicionar!</button>
+	      <button type="button">Limpar!</button>
+	      <button type="button">excluir!</button>
+      </div>
+      
+      <div class="text-right">
+        <paginacao 
+          data-current-page="{{vm.consultar.tabela.currentPage}}" 
+          data-total-page="{{vm.consultar.tabela.totalPage}}"
+          data-pagination-range="7"
+          data-fn-get-page="vm.getLista">
+        </paginacao>
+      </div>
+    </div>
+	</div>		
 	
+	<div style="width:98%; text-align:right; height:auto; position:absolute; bottom:1%; border:1px solid #aaa;padding:4px;background:#FF0000;background:-webkit-gradient(linear,left top,left bottom,color-stop(0.90,#3cf),color-stop(0.02,#ff0));color:#FF0000;">
+		<h4 style="font-family:courier; color:green ">Java Web / Integração Contínua 2018</h4>
+	</div>	
 </body>
 </html>
