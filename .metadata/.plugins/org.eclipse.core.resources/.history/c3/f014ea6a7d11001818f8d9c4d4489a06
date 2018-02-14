@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	 h1 { color: red; }  
+     h2 { color: #0f0; }
+     p  { color: rgb(0,0,255); }
+</style>
+
+<meta charset="ISO-8859-1">
+<title>Projeto Agenda</title>
+</head>
+<body>
+	<h1>Primeira página do projeto...</h1>
+</body>
+</html>
